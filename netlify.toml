@@ -1,0 +1,21 @@
+[build]
+command = "pnpm build"
+publish = ".next"
+
+[build.environment]
+NODE_VERSION = "20"
+
+[context.production.environment]
+AUTH_REQUIRED = "true"
+
+[context.deploy-preview.environment]
+AUTH_REQUIRED = "false"
+
+[[headers]]
+for = "/*"
+[headers.values]
+X-Robots-Tag = "noindex, nofollow, noarchive, nosnippet"
+Referrer-Policy = "strict-origin-when-cross-origin"
+X-Content-Type-Options = "nosniff"
+Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+

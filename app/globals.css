@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f6f8fb;
+  --foreground: #111827;
+  --card: rgba(255, 255, 255, 0.92);
+  --card-foreground: #111827;
+  --muted: #eef2f6;
+  --muted-foreground: #64748b;
+  --border: #dbe3ed;
+  --primary: #145f52;
+  --primary-strong: #0d493f;
+  --secondary: #e9f2ef;
+  --secondary-hover: #dcebe6;
+  --secondary-foreground: #145f52;
+  --danger: #b91c1c;
+  --danger-strong: #991b1b;
+  --ring: #145f52;
+  --sidebar: #edf3f6;
+  --sidebar-foreground: #314155;
+  --chart-green: #14765f;
+  --chart-blue: #2563eb;
+  --chart-amber: #d97706;
+  --chart-red: #dc2626;
+  --chart-slate: #64748b;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.recharts-wrapper,
+.recharts-surface {
+  max-width: 100%;
+  overflow: hidden;
+}

@@ -1,0 +1,16 @@
+create index if not exists idx_accounts_campus on accounts(campus);
+create index if not exists idx_tasks_campus on tasks(campus);
+create index if not exists idx_tasks_account_id on tasks(account_id);
+create index if not exists idx_xhs_notes_account_id on xhs_notes(account_id);
+create index if not exists idx_xhs_notes_task_id on xhs_notes(task_id);
+create index if not exists idx_leads_campus on leads(campus);
+create index if not exists idx_leads_source_account_id on leads(source_account_id);
+create index if not exists idx_leads_source_note_id on leads(source_note_id);
+create index if not exists idx_lead_activities_lead_id on lead_activities(lead_id);
+create index if not exists idx_bookings_campus on bookings(campus);
+create index if not exists idx_bookings_lead_id on bookings(lead_id);
+create index if not exists idx_crawl_targets_account_id on crawl_targets(account_id);
+create index if not exists idx_crawl_targets_note_id on crawl_targets(note_id);
+create index if not exists idx_crawl_errors_crawl_run_id on crawl_errors(crawl_run_id);
+create index if not exists idx_account_snapshots_account_id on account_snapshots(account_id);
+create index if not exists idx_note_snapshots_note_id on note_snapshots(note_id);
